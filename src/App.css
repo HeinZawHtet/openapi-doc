@@ -1,0 +1,148 @@
+body {
+  overflow-x: hidden;
+}
+body,h1,h2,h3,h4,h5,h6,p {
+  font-family: 'Open Sans'
+}
+h1,h2,h3,h4,h5,h6 {
+  color: #33383c;
+}
+p {
+  color: #9ea6ad;
+}
+.Home {
+  max-width: 333px;
+  margin-top: 300px;
+}
+.preview-input {
+  margin-right: 15px;
+}
+
+.navbar.bg-primary {
+  background-color: #2283c9 !important;
+}
+.nav-link {
+  color: #bbb;
+  font-size: 12px;
+}
+
+.Sidebar {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.Content {
+  padding: 0;
+  border-left: 1px solid rgba(81,88,90,0.17);
+}
+.ReferenceItem {
+  border-bottom: 1px solid rgba(81,88,90,0.17);
+}
+
+.ref-summary, .ref-title {
+  font-size: 30px;
+  padding: 15px;
+}
+.ref-url {
+  color: #a8a7a7;
+  padding: 15px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #dee5e8;
+  border-top: 1px solid #dee5e8;
+}
+.ref-method-badge {
+  text-transform: uppercase;
+}
+.ref-params {
+  padding: 30px;
+}
+.ref-response {
+  background: #f0f2f4;
+  border-left: 1px solid #dee5e8;
+  padding: 15px;
+  padding-right: 30px;
+}
+.ref-description { 
+  padding: 15px;
+}
+.ref-code {
+  background-color: #3d434a;
+  color: #c3c6c4;
+  padding: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 0;
+}
+.loading {
+  border-radius: 50%;
+  position: relative;
+  opacity: 1;
+  width: 32px;
+  height: 32px;
+  clear: both;
+  margin: 20px auto;
+}
+
+.loading:before, .loading:after {
+  content: '';
+  border: 1px #000 solid;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+}
+
+.loading:before {
+  transform: scale(1, 1);
+  opacity: 1;
+  -webkit-animation: spWaveBe 0.6s infinite linear;
+  animation: spWaveBe 0.6s infinite linear;
+}
+
+.loading:after {
+  transform: scale(0, 0);
+  opacity: 0;
+  -webkit-animation: spWaveAf 0.6s infinite linear;
+  animation: spWaveAf 0.6s infinite linear;
+}
+
+@-webkit-keyframes spWaveAf {
+  from {
+    -webkit-transform: scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes spWaveAf {
+  from {
+    transform: scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes spWaveBe {
+  from {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
+}
+@keyframes spWaveBe {
+  from {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
+}
