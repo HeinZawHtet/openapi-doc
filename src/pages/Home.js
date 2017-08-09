@@ -38,6 +38,11 @@ class Home extends Component {
           </div>
           <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Preview</button>
         </form>
+        <div style={{textAlign: "center", marginTop: '30px'}}>
+          <img src={require('../logo.svg')} width="80px" /> <br /> This is just a demo like https://swagger.readme.io/. but it's build with ReactJs. 
+          It may contain some bug. But I think this is enought as a demo for a job application.
+          I hope you guys love it.
+        </div>
         { 
           this.state.redirectToPreview && 
           <Redirect to={"/preview?url=" + this.state.previewValue} />

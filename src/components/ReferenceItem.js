@@ -5,17 +5,17 @@ import CodeExample from './CodeExample.js';
 
 class ReferenceItem extends Component {
   render() {
-    var { reference, host, basePath, method, definitions } = this.props;
+    var { reference, host, basePath, method, definitions, path } = this.props;
   // <div>{reference.responses[response]}</div>
     return (
       <div className="ReferenceItem">
-        <h2 className="ref-summary">{reference.summary}</h2>
+        <h2 className="ref-summary" id={path}>{reference.summary}</h2>
         {
           reference.description &&
           <p className="ref-description">{reference.description}</p>
         }
-        <h6 className="ref-url"><span className="ref-method-badge badge badge-default">{method}</span> { 'http://' + host + basePath + '/' + method}</h6>
-        <CodeExample params={reference.parameters} method={method} url={ 'http://' + host + basePath + '/' + method} />
+        <h6 className="ref-url"><span className="ref-method-badge badge badge-default">{method}</span> { 'http://' + host + basePath + path}</h6>
+        <CodeExample params={reference.parameters} method={method} url={ 'http://' + host + basePath + path} />
         <div className="row">
           <div className="ref-params col-md-8">
             <h6>Params</h6>

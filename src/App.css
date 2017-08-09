@@ -10,6 +10,11 @@ h1,h2,h3,h4,h5,h6 {
 p {
   color: #9ea6ad;
 }
+.alert {
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none;
+}
 .Home {
   max-width: 333px;
   margin-top: 300px;

@@ -56,7 +56,7 @@ class Preview extends Component {
       if (this.state.jsonData.paths.hasOwnProperty(path)) {
         rows.push(
           <li className="nav-item">
-            <a className="nav-link" href="#">{path}</a>
+            <a className="nav-link" href={ '#' + path}>{path}</a>
           </li>
         );
       }
@@ -66,7 +66,7 @@ class Preview extends Component {
     for (var path in this.state.jsonData.paths) {
       if (this.state.jsonData.paths.hasOwnProperty(path)) {
         references.push(
-          <References host={this.state.jsonData.host} basePath={this.state.jsonData.basePath} reference={this.state.jsonData.paths[path]} definitions={this.state.jsonData.definitions}/>
+          <References path={path} host={this.state.jsonData.host} basePath={this.state.jsonData.basePath} reference={this.state.jsonData.paths[path]} definitions={this.state.jsonData.definitions}/>
         );
       }
     }
@@ -74,6 +74,11 @@ class Preview extends Component {
     return (
       <div className="Preview">
         <Nav />
+        <div className="alert alert-danger">
+          This is just a demo like https://swagger.readme.io/. but it's build with ReactJs. 
+          It may contain some bug. But I think this is enought as a demo for a job application.
+          I hope you guys love it.
+        </div>
         <div className="container-fluid">
           <div className="row">
             <div className="Sidebar col-md-2">
