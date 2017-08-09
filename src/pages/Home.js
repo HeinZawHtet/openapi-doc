@@ -34,7 +34,7 @@ class Home extends Component {
       <div className="Home container">
         <form className="form-inline" onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <input type="input" className="preview-input form-control" placeholder="OpenAPI File" onChange={this.handlePreviewChange} />
+            <input type="input" className="preview-input form-control" placeholder="Paste OpenAPI File URL" onChange={this.handlePreviewChange} />
           </div>
           <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Preview</button>
         </form>
