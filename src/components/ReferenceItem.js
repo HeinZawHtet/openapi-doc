@@ -15,7 +15,7 @@ class ReferenceItem extends Component {
           <p className="ref-description">{reference.description}</p>
         }
         <h6 className="ref-url"><span className="ref-method-badge badge badge-default">{method}</span> { 'http://' + host + basePath + path}</h6>
-        { reference.parameters && <CodeExample params={reference.parameters} method={method} url={ 'http://' + host + basePath + path} /> }
+        <CodeExample params={(reference.parameters) ? reference.parameters : null} method={method} url={ 'http://' + host + basePath + path} />
         <div className="row">
           <div className="ref-params col-md-8">
             <h6>Params</h6>
