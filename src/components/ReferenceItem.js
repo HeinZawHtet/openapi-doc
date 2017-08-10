@@ -15,11 +15,11 @@ class ReferenceItem extends Component {
           <p className="ref-description">{reference.description}</p>
         }
         <h6 className="ref-url"><span className="ref-method-badge badge badge-default">{method}</span> { 'http://' + host + basePath + path}</h6>
-        <CodeExample params={reference.parameters} method={method} url={ 'http://' + host + basePath + path} />
+        { reference.parameters && <CodeExample params={reference.parameters} method={method} url={ 'http://' + host + basePath + path} /> }
         <div className="row">
           <div className="ref-params col-md-8">
             <h6>Params</h6>
-            <div className="table-responsive">
+            { reference.parameters && <div className="table-responsive">
               <table className="ref-params-table table table-striped">
                 <tbody>
                   { reference.parameters.map(function(param, index) {
@@ -32,8 +32,8 @@ class ReferenceItem extends Component {
                     )
                   }) }
                 </tbody>
-              </table>
-            </div>
+              </table> 
+            </div> }
           </div>
           <div className="ref-response col-md-4">
             <h6>Response</h6>
