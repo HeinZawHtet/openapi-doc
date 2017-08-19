@@ -23,14 +23,8 @@ class Preview extends Component {
     var that = this;
     fetch(getParameterByName('url', this.props.location.search))
     .then(  
-      function(response) {  
-        if (response.status !== 200) {  
-          console.log('Looks like there was a problem. Status Code: ' +  
-            response.status);  
-          return;  
-        }
+      function(response) {
 
-        // Examine the text in the response  
         response.json().then(function(data) {  
           that.setState({
             jsonData : data
@@ -39,7 +33,7 @@ class Preview extends Component {
       }  
     )  
     .catch(function(err) {  
-      console.log('Fetch Error :-S', err);  
+      console.log('Fetch Error - ', err);  
     });
   }
 
